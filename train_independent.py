@@ -3,14 +3,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # Hyper parameters
-block_size = 64
-batch_size = 32
+batch_size = 64
+block_size = 256
 lr = 3e-4
 max_iters = 5000
 eval_iters = 200
 eval_interval = 500
 n_emb = 384
-n_head = 4
+n_head = 6
 n_layer = 6
 dropout = 0.2
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
