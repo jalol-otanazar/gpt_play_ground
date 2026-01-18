@@ -3,8 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # hyper params
-batch_size = 32
-block_size = 8
+batch_size = 64
+block_size = 256
 n_emb = 384
 lr = 3e-4
 max_iters = 5000
@@ -73,6 +73,7 @@ class Head(nn.Module):
         v = self.value(x)
         out = attr @ v
         return out
+    
 class MultiHead(nn.Module):
     def __init__(self, n_emb):
         super().__init__()
